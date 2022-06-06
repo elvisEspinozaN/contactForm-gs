@@ -5,37 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/js/form.js"></script>
+    <link rel="stylesheet" href="css/form.css" />
     <title>contact form</title>
   </head>
   <body>
-    <div class="title">
+    <div class="wrapper">
       <h2>Contact Us</h2>
-    </div>
-    <div>
-      <form action="/nothing.php">
-        <label for="fname">First Name</label>
+      <form class="form" action="/nothing.php">
         <input
+          class="input input-field"
           type="text"
           id="fname"
           name="firstname"
           placeholder="first name"
         />
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="last name" />
+        <input
+          class="input input-field"
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="last name"
+        />
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="email" />
-
-        <label for="time">Best Time to Reach You?</label>
-        <select name="time" id="time">
+        <input
+          class="input input-field"
+          type="text"
+          id="email"
+          name="email"
+          placeholder="email"
+        />
+        <br />
+        <label class="input" for="time">Best Time to Reach You?</label>
+        <select class="input input-field" name="time" id="time">
           <option value="Morning">Morning</option>
           <option value="Afternoon">Afternoon</option>
           <option value="Evening">Evening</option>
         </select>
 
-        <label for="msg">Message</label>
         <textarea
+          class="input input-field"
           name="msg"
           id="msg"
           cols="30"
@@ -43,7 +52,7 @@
           placeholder="Leave us a message here..."
         ></textarea>
 
-        <input type="button" value="submit" onclick="showtext()" />
+        <input class="btn" type="button" value="submit" onclick="showtext()" />
       </form>
     </div>
 
