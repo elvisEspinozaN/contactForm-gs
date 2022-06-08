@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/js/form.js"></script>
     <link rel="stylesheet" href="css/form.css" />
     <title>contact form</title>
   </head>
   <body>
     <div class="wrapper">
       <h2>Contact Us</h2>
-      <form class="form" action="/nothing.php">
+
+      <form id="contact-form" action="javascript:void(0);" class="form">
         <input
           class="input input-field"
           type="text"
@@ -35,7 +35,10 @@
           name="email"
           placeholder="email"
         />
+        <p id="email-err" class="error">Please enter a valid email</p>
+
         <br />
+
         <label class="input" for="time">Best Time to Reach You?</label>
         <select class="input input-field" name="time" id="time">
           <option value="Morning">Morning</option>
@@ -52,10 +55,11 @@
           placeholder="Leave us a message here..."
         ></textarea>
 
-        <input class="btn" type="button" value="submit" onclick="showtext()" />
+        <button id="btn-submit" class="btn" onclick="validation()">
+          Submit
+        </button>
       </form>
     </div>
-
-    <div id="show"></div>
+    <script src="/js/form.js"></script>
   </body>
 </html>
